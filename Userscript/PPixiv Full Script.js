@@ -21316,11 +21316,6 @@ This can be enabled in preferences, and may become the default in a future relea
                             <ppixiv-inline src="resources/zoom-minus.svg"></ppixiv-inline>
                         </div>
                     </div>
-//                    <div class=button-block>
-//                        <div class="button requires-zoom button-zoom-level" data-level="cover" data-popup="Zoom to cover">
-//                            <ppixiv-inline src="resources/zoom-full.svg"></ppixiv-inline>
-//                        </div>
-//                    </div>
                     <div class=button-block>
                         <div class="button button-download-quick" data-popup="Download">
                             <ppixiv-inline src="resources/download-icon.svg"></ppixiv-inline>
