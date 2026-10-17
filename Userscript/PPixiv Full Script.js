@@ -22031,6 +22031,7 @@ This can be enabled in preferences, and may become the default in a future relea
       this.refresh();
     };
     _clickedQuickDownload = (e) => {
+      console.log("Quick download clicked!");
       if (this._mediaId == null)
         console.log("Error: Quick download clicked but no mediaId");
         return;
