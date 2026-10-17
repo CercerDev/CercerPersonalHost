@@ -22050,8 +22050,7 @@ This can be enabled in preferences, and may become the default in a future relea
       if (this.mediaInfo == null)
         console.log("Error: Quick download mediaInfo not found");
         return;
-      else
-        console.log("MediaInfo found:", this.mediaInfo);
+      console.log("MediaInfo found:", this.mediaInfo);
       console.log("Quick download setting downloadType to DEBUG bananas");
       let downloadType = "bananas";
       console.log("Quick download checking if image or video");
