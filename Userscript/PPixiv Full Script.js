@@ -22032,20 +22032,41 @@ This can be enabled in preferences, and may become the default in a future relea
     };
     _clickedQuickDownload = (e) => {
       console.log("Quick download clicked!");
+      console.log("Quick download checking valid mediaId");
       if (this._mediaId == null)
-        console.log("Error: Quick download clicked but no mediaId");
+        console.log("Error: Quick download no mediaId");
         return;
+      console.log("Quick download mediaId did not fail");
+      console.log("Quick download checking valid button");
       let clickedButton = e.target.closest(".download-button");
       if (clickedButton == null)
-        console.log("Error: Quick download clicked but button not found");
+        console.log("Error: Quick download button not found");
         return;
+      console.log("Quick download button find did not fail");
+      console.log("Quick download preventing defaults");
       e.preventDefault();
       e.stopPropagation();
-      let downloadType = null;
+      console.log("Quick download prevent defaults did not fail");
+      if (this.mediaInfo == null)
+        console.log("Error: Quick download mediaInfo not found");
+        return;
+      else
+        console.log("MediaInfo found:", this.mediaInfo);
+      console.log("Quick download setting downloadType to DEBUG bananas");
+      let downloadType = "bananas";
+      console.log("Quick download checking if image or video");
       if (Actions.isDownloadTypeAvailable("image", this.mediaInfo))
         downloadType = "image";
+        console.log("Quick download image recognized");
       else if (Actions.isDownloadTypeAvailable("MKV", this.mediaInfo))
         downloadType = "MKV";
+        console.log("Quick download video recognized");
+      else if (downloadType == "bananas")
+        console.log("Quick download bananas recognized, which shouldn't happen");
+      if (downloadType == null)
+        console.log("Error: Quick download file type recognition failed, which really shouldn't happen");
+        return;
+      console.log("Quick download calling Actions.downloadIllust with mediaId:", this._mediaId, "and downloadType:", downloadType);
       Actions.downloadIllust(this._mediaId, downloadType);
     };
     get _folderIdForParent() {
