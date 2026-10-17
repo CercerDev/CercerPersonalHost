@@ -21317,7 +21317,7 @@ This can be enabled in preferences, and may become the default in a future relea
                         </div>
                     </div>
                     <div class=button-block>
-                        <div class="button button-download-quick" data-popup="Download">
+                        <div class="button button-download-quick enabled" data-popup="Download">
                             <ppixiv-inline src="resources/download-icon.svg"></ppixiv-inline>
                         </div>
                     </div>
